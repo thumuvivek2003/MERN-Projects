@@ -1,5 +1,6 @@
 import React, { useState, Suspense, lazy } from "react";
 import CharApp from "./myApps/DisneyCharacter/App";
+import TicTacToe from "./myApps/MultiPlayerTicTac/Frontend";
 
 // Define a function that dynamically imports the component
 const components = {
@@ -18,10 +19,15 @@ const components = {
     path: "./myApps/EmailBatchSender/Frontend/index",
     Component: lazy(() => import("./myApps/EmailBatchSender/Frontend/index")),
   },
+  TicTacToea: {
+    name: "TicTacToea",
+    path: "./myApps/MultiPlayerTicTac/Frontend/index.jsx",
+    Component: lazy(() => import("./myApps/MultiPlayerTicTac/Frontend/index.jsx")),
+  },
 };
 
 function App() {
-  const [selectedComponent, setSelectedComponent] = useState("EmailBatchSender");
+  const [selectedComponent, setSelectedComponent] = useState("TicTacToea");
 
   const handleOptionChange = (event) => {
     setSelectedComponent(event.target.value);
