@@ -1,0 +1,57 @@
+.character-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    text-align: center;
+    width: 180px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    margin-top:150px;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .character-image {
+    position: absolute;
+    left: 5px;
+    height: 200px;
+    bottom: 0px;
+    aspect-ratio: cover;
+  }
+  
+  .character-card h2 {
+    margin: 10px 0 5px;
+    font-size: 22px;
+    font-weight: bold;
+    background:white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .character-card p {
+    font-size: 14px;
+    color: #f3f4f6;
+    margin: 0;
+    font-weight: 500;
+  }
+  
+  .character-card:nth-child(1) {
+    background: linear-gradient(135deg, #e53e3e, #f87171);
+  }
+  
+  .character-card:nth-child(2) {
+    background: linear-gradient(135deg, #3182ce, #63b3ed);
+  }
+  
+  .character-card:nth-child(3) {
+    background: linear-gradient(135deg, #38a169, #68d391);
+  }
+  

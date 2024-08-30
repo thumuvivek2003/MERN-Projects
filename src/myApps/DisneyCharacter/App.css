@@ -1,0 +1,25 @@
+.app {
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff, #e5e7eb);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  
+  .characters {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 55px;
+    overflow-x: auto;
+    scrollbar-width: none; /* For Firefox */
+
+
+  }
+  
+  .characters::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  

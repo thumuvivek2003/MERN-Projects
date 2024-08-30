@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 350px;
+    margin: 0px auto;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+label{
+    display: block;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight:200;
+    color:#888;
+}
+
+.input-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    background: #f9faff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"],
+input[type="number"] {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left:8px;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background: transparent;
+    font-size: 16px;
+    color: #555;
+    margin-top: 5px;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #6c7ae0;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(108, 122, 224, 0.3);
+}
+
+button:hover {
+    background: #5a68c9;
+}
+
+.table-container {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+table {
+    margin-top: 12px;
+    width: 100%;
+    border-collapse: collapse;
+    background: #f9faff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    font-size: 10px;
+    background: #6c7ae0;
+    color: #fff;
+}
+
+td {
+    color: #555;
+}
+
+tr:nth-child(even) {
+    background-color: #eef1ff;
+}
+
+tr:hover {
+    background-color: #d6dfff;
+}
