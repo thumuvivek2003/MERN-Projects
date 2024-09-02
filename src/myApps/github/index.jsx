@@ -11,7 +11,6 @@ function App() {
     try {
       const response = await axios.get(`https://api.github.com/search/users?q=${query}&order=desc`);
       setUsers(response.data.items);
-      console.log(users);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
