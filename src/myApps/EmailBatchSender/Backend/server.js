@@ -9,9 +9,50 @@ app.use(bodyParser.json());
 
 // Example batch data
 const batches = {
-    All: [{ name: 'John Doe', email: 'S190783@rguktsklm.ac.in' }, { name: 'Jane Doe', email: 'thumuvivek2003@gmail.com' }],
-    Developers: [{ name: 'Dev A', email: 'thumuvivek2003@gmail.com' }],
-    Testers: [{ name: 'Tester A', email: 'thumuvivek2003@gmail.com' }]
+    developers: [
+        { name: 'Developer 1', email: 'developer1@example.com' },
+        { name: 'Developer 2', email: 'developer2@example.com' },
+        { name: 'Developer 3', email: 'developer3@example.com' },
+        { name: 'Developer 4', email: 'developer4@example.com' },
+        { name: 'Developer 5', email: 'developer5@example.com' },
+
+    ],
+    testers: [
+        { name: 'Tester 1', email: 'tester1@example.com' },
+        { name: 'Tester 2', email: 'tester2@example.com' },
+        { name: 'Tester 3', email: 'tester3@example.com' },
+        { name: 'Tester 4', email: 'tester4@example.com' },
+        { name: 'Tester 5', email: 'tester5@example.com' },
+    ],
+    interns: [
+        { name: 'Intern 1', email: 'intern1@example.com' },
+        { name: 'Intern 2', email: 'intern2@example.com' },
+        { name: 'Intern 3', email: 'intern3@example.com' },
+        { name: 'Intern 4', email: 'intern4@example.com' },
+        { name: 'Intern 5', email: 'intern5@example.com' },
+    ],
+    devOpsEngineer: [
+        { name: 'DevOps Engineer 1', email: 'devops1@example.com' },
+        { name: 'DevOps Engineer 2', email: 'devops2@example.com' },
+        { name: 'DevOps Engineer 3', email: 'devops3@example.com' },
+        { name: 'DevOps Engineer 4', email: 'devops4@example.com' },
+        { name: 'DevOps Engineer 5', email: 'devops5@example.com' },
+    ],
+    frontEndDevelopers: [
+        { name: 'Front-End Developer 1', email: 'frontend1@example.com' },
+        { name: 'Front-End Developer 2', email: 'frontend2@example.com' },
+        { name: 'Front-End Developer 3', email: 'frontend3@example.com' },
+        { name: 'Front-End Developer 4', email: 'frontend4@example.com' },
+        { name: 'Front-End Developer 5', email: 'frontend5@example.com' },
+
+    ],
+    backEndDevelopers: [
+        { name: 'Back-End Developer 1', email: 'backend1@example.com' },
+        { name: 'Back-End Developer 2', email: 'backend2@example.com' },
+        { name: 'Back-End Developer 3', email: 'backend3@example.com' },
+        { name: 'Back-End Developer 4', email: 'backend4@example.com' },
+        { name: 'Back-End Developer 5', email: 'backend5@example.com' },
+    ]
 };
 
 // Get batch data

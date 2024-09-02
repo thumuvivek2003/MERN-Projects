@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clustered Chat</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #login { display: none; }
+        #chat { display: none; }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="username" placeholder="Your name">
+        <button id="join">Join Chat</button>
+    </div>
+
+    <div id="chat">
+        <h2>Welcome, <span id="user-name"></span></h2>
+        <div id="user-list">
+            <h3>Online Users:</h3>
+            <ul id="users"></ul>
+        </div>
+        <div id="chat-area">
+            <h3>Chat</h3>
+            <ul id="messages"></ul>
+            <input id="message" autocomplete="off" placeholder="Type a message..." />
+            <button id="send">Send</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const loginDiv = document.getElementById('login');
+        const chatDiv = document.getElementById('chat');
+        const userNameSpan = document.getElementById('user-name');
+        const userList = document.getElementById('users');
+        const messages = document.getElementById('messages');
+        const messageInput = document.getElementById('message');
+        const joinButton = document.getElementById('join');
+        const sendButton = document.getElementById('send');
+
+        let currentUser = null;
+
+        joinButton.addEventListener('click', () => {
+            const username = document.getElementById('username').value.trim();
+            if (username) {
+                currentUser = username;
+                socket.emit('join', username);
+                userNameSpan.textContent = username;
+                loginDiv.style.display = 'none';
+                chatDiv.style.display = 'block';
+            }
+        });
+
+        socket.on('userList', (users) => {
+            userList.innerHTML = '';
+            users.forEach(user => {
+                const li = document.createElement('li');
+                li.textContent = user;
+                li.addEventListener('click', () => {
+                    socket.emit('startChat', user);
+                });
+                userList.appendChild(li);
+            });
+        });
+
+        sendButton.addEventListener('click', () => {
+            const message = messageInput.value.trim();
+            if (message) {
+                socket.emit('chat message', message);
+                messageInput.value = '';
+            }
+        });
+
+        socket.on('chat message', (msg) => {
+            const li = document.createElement('li');
+            li.textContent = msg;
+            messages.appendChild(li);
+        });
+    </script>
+</body>
+</html>
