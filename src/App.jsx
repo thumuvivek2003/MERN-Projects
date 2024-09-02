@@ -2,8 +2,6 @@
 // import CharApp from "./myApps/DisneyCharacter/App";
 // import TicTacToe from "./myApps/MultiPlayerTicTac/Frontend";
 
-// // Define a function that dynamically imports the component
-
 // const components = {
 //   CharApp: {
 //     name: "Disney Character App",
@@ -40,10 +38,15 @@
 //     path: "./myApps/ReduxCounters/index.jsx",
 //     Component: lazy(() => import("./myApps/ReduxCounters/index.jsx")),
 //   },
+//   GitHub:{
+//     name: "GitHub",
+//     path: "./myApps/github/index.jsx",
+//     Component: lazy(() => import("./myApps/github/index.jsx")), 
+//   }
 // };
 
 // function App() {
-//   const [selectedComponent, setSelectedComponent] = useState("ReduxCounters");
+//   const [selectedComponent, setSelectedComponent] = useState("GitHub");
 
 //   const handleOptionChange = (event) => {
 //     setSelectedComponent(event.target.value);
@@ -72,10 +75,10 @@
 
 
 import React from 'react'
-import Counters from './myApps/ReduxCounters/index.jsx';
+import GitHub from './myApps/github/index.jsx';
 function App() {
   return (
-    <Counters />
+    <GitHub />
   )
 }
 
