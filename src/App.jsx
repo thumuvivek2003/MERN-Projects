@@ -1,5 +1,4 @@
 import React, { useState, Suspense, lazy } from "react";
-import ThemeSelect from "./myApps/ThemeSelect/ThemeSelect.jsx";
 
 const components = {
   CharApp: {
@@ -50,11 +49,34 @@ const components = {
     name:"ThemeSelect",
     Component: lazy(() => import("./myApps/ThemeSelect/index.jsx")), 
   },
+  FaceBook:{
+    name:"FaceBook",
+    Component: lazy(() => import("./myApps/FaceBook/frontend/index")), 
+  },
+  Gallery:{
+    name:"Gallery",
+    Component: lazy(() => import("./myApps/Gallery/index")), 
+  },
+  QRGen:{
+    name:"QRGen",
+    Component: lazy(() => import("./myApps/QRGen/index")), 
+  },
+  FloodLocator:{
+    name:"FloodLocator",
+    Component: lazy(() => import("./myApps/FloodLocator/index")), 
+  },
+  fireBase:{
+    name:"fireBase",
+    Component: lazy(() => import("./myApps/fireBase/index")), 
+  }
+  
+  
+
   
 };
 
 function App() {
-  const [selectedComponent, setSelectedComponent] = useState("ThemeSelect");
+  const [selectedComponent, setSelectedComponent] = useState("FloodLocator");
 
   const handleOptionChange = (event) => {
     setSelectedComponent(event.target.value);

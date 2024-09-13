@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-const ChapterDisplay = ({ fontClass,book, chapter, verses, selectedVerse}) => {
+const ChapterDisplay = ({ fontClass,book, chapter, verses, selectedVerse,theme}) => {
   const verseRefs = useRef([]); // Array of refs to each verse
   const [highlightedVerse, setHighlightedVerse] = useState(null);
 
@@ -19,17 +19,18 @@ const ChapterDisplay = ({ fontClass,book, chapter, verses, selectedVerse}) => {
   }, [selectedVerse]);
 
   return (
-    <div className = {`p-4 ${fontClass}`}>
-      <h2 className="text-xl font-bold mb-4">
+    <div className = {`p-4 ${fontClass} ${theme.bgColor}`}>
+      <h2 className = {`text-xl font-bold mb-4 ${theme.headingColor}`}>
         {book} - Chapter {chapter}
+        {/* <p>{JSON.stringify(theme)}</p> */}
       </h2>
       <div className="space-y-4">
         {verses.map((verseObj, index) => (
           <div
             key={verseObj.verse}
             ref={(el) => (verseRefs.current[index] = el)}
-            className={`p-4 rounded-lg shadow transition ease-in-out delay-150 ${
-              verseObj.verse === highlightedVerse ? 'bg-yellow-200' : 'bg-gray-100'
+            className={`p-4 rounded-lg shadow transition ease-in-out delay-150 ${theme.textColor} ${
+              verseObj.verse === highlightedVerse ? 'bg-yellow-200' : `${theme.cardColor}`
             }`}
             
             style={{ transition: 'background-color 0.3s ease-in-out'}}

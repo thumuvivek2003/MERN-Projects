@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ThemeSelect from './ThemeSelect';
-import themes from './themes';  // Import your themes object here
+import themes from './themes'; 
 
 const App = () => {
   const [currentTheme, setCurrentTheme] = useState('light');

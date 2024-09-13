@@ -1,0 +1,28 @@
+Bucket URL : gs://floodlocator-604e5.appspot.com
+filename: floodlocator-604e5-firebase-adminsdk-4o8uk-206d62de02.json
+
+
+
+SDK
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAeTt9WseoYm9IPgbUM9q3WXOtoYbhNnvg",
+  authDomain: "floodlocator-604e5.firebaseapp.com",
+  databaseURL: "https://floodlocator-604e5-default-rtdb.firebaseio.com",
+  projectId: "floodlocator-604e5",
+  storageBucket: "floodlocator-604e5.appspot.com",
+  messagingSenderId: "939903365301",
+  appId: "1:939903365301:web:02a053330c5ef545538efc"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
+API 
+AIzaSyAeTt9WseoYm9IPgbUM9q3WXOtoYbhNnvg
